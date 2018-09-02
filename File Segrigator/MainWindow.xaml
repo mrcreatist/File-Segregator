@@ -9,6 +9,7 @@
     <Grid>
         <Label x:Name="header" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
         <Label Content="Drag and drop your content over this window" HorizontalAlignment="Left" Margin="274,125,0,0" VerticalAlignment="Top"/>
+        <Label Content="FILE ORGANIZER&#xD;&#xA;" HorizontalAlignment="Left" Margin="356,228,0,0" VerticalAlignment="Top" Height="27" Width="104"/>
 
     </Grid>
 </Window>
