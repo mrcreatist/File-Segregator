@@ -50,9 +50,21 @@ namespace File_Segrigator
                     string fileFormat = getFileDetails(file, "format");
 
                     setUpFolderToMoveIn(sourceFolder);
+                    Console.WriteLine(sourceFolder);
+                    Console.WriteLine(destinationPath);
+                    Console.WriteLine(fileName);
+                    Console.WriteLine(fileFormat);
+                    Console.WriteLine(System.IO.File.Exists(destinationPath+'\\'+fileFormat+'\\'+ fileName+'.'+fileFormat));
 
-                    Thread fileTransfer = new Thread(() => moveFile(sourceFolder, destinationPath, fileName, fileFormat));
-                    fileTransfer.Start();
+                    if (!checkAlreadyFileExists(destinationPath, fileName, fileFormat))
+                    {
+                        Thread fileTransfer = new Thread(() => moveFile(sourceFolder, destinationPath, fileName, fileFormat));
+                        fileTransfer.Start();
+                    }
+                    else
+                    {
+                        System.Windows.MessageBox.Show(fileName + "." + fileFormat + " already exists");
+                    }
                 }
                 catch (Exception z)
                 {
@@ -129,6 +141,11 @@ namespace File_Segrigator
         void addToHeader(string text)
         {
             header.Content += '\n' + text;
+        }
+
+        Boolean checkAlreadyFileExists(string destinationPath, string fileName, string fileFormat)
+        {
+            return System.IO.File.Exists(destinationPath + '\\' + fileFormat + '\\' + fileName + '.' + fileFormat);
         }
     }
 }

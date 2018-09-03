@@ -5,11 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:File_Segrigator"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="287" Width="523" MinWidth="300" MinHeight="200">
+    <Grid VerticalAlignment="Top" HorizontalAlignment="Left" Height="144" Width="246" MinWidth="300" MinHeight="200">
         <Label x:Name="header" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
-        <Label Content="Drag and drop your content over this window" HorizontalAlignment="Left" Margin="274,125,0,0" VerticalAlignment="Top"/>
-        <Label Content="FILE ORGANIZER&#xD;&#xA;" HorizontalAlignment="Left" Margin="356,228,0,0" VerticalAlignment="Top" Height="27" Width="104"/>
+        <StackPanel HorizontalAlignment="Left" Height="136" VerticalAlignment="Top" Margin="10,10,0,0" Panel.ZIndex="10">
+            <Label Content="FILE ORGANIZER" FontSize="18" FontWeight="ExtraBold" HorizontalAlignment="Left" VerticalAlignment="Top" FontStretch="Condensed" HorizontalContentAlignment="Center" Margin="0"/>
+            <Label Content="Creatist Garage Project" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" Margin="0,-12,0,0"/>
+            <Label Content="You can drop your files in this window" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" BorderThickness="0,36,0,0"/>
+        </StackPanel>
 
     </Grid>
 </Window>
